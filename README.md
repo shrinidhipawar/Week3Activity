@@ -6,11 +6,11 @@ LIBRARY MANAGEMENT SYSTEM
 
 FEATURES :
 
+  * Home Page
   * Recording books
-  * Lending and Receivung
-  * Due date
-  * Fine collection
-  * Categorical arrangement
+  * Lending and Receiving
+
+UPCOMING FEATURES :
 
 TECHNICAL REQUIREMENTS :
 
