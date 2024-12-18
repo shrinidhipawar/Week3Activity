@@ -12,6 +12,10 @@ FEATURES :
   * Fine collection
   * Categorical arrangement
 
+TECHNICAL REQUIREMENTS :
+
+
+
 FRONTEND :
 
 
