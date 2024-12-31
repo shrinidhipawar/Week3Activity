@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1 align="center">BORROW RETURN PAGE</h1>
+    <div class="borrow-return-container">
+        <select id="operation">
+            <option value="BORROW">BORROW</option>
+            <option value="RETURN">RETURN</option>
+        </select>
+        <input type="text" id="book-name" placeholder="Book Name">
+        <input type="number" placeholder="Quantity" id="book-quantity" min="0" step="1">
+        <button id="borrow-return-button">Borrow Or Return</button>
+    </div>
+</body>
+<script type="module" src="BorrowReturnPage.js"></script>
+</html>
