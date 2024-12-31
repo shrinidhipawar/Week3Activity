@@ -1,12 +1,14 @@
 const ws = require('ws'); 
 import { port } from '../../Common/Globals.js';
+import DatabaseConnector from '../Database/DatabaseConnector.js';
+import { initializeDatabase } from '../Database/InitializeDatabase.js';
 import { messageHandler } from './MessageHandler.js';
 
 class Server
 {
   static webSocketServer = null; 
 
-  static startServer() 
+  static async startServer() 
   {
     Server.webSocketServer = new ws.Server( {port: port} );
     console.log("Starting server");
@@ -17,7 +19,7 @@ class Server
 
       socket.on("message", (message) => 
       {
-        messageHandler(JSON.parse(message));
+        messageHandler(socket, JSON.parse(message));
       }); 
 
       socket.on("close", () => 
@@ -31,6 +33,9 @@ class Server
       });
 
     });
+
+    await DatabaseConnector.connect();
+    await initializeDatabase();
   }
 }
 

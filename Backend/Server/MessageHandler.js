@@ -1,17 +1,15 @@
 import { operations } from "../../Common/Enumerations/Operations.js";
+import { insertBook } from "./Messages/InsertBook.js";
 
-export function messageHandler(message)
+export function messageHandler(socket, message)
 {
     const operation = message["operation"];
-    const data = message["data"]; 
-
-    console.log("Data: " , data);
 
     switch(operation)
     {
         case operations.INSERT:
         {
-            console.log("Simply")   
+            insertBook(socket, message)
             break;
         }
 
