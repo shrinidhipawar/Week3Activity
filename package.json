@@ -2,11 +2,18 @@
   "name": "week3activity",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "Main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^33.2.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.12.0",
+    "ws": "^8.18.0"
+  }
 }
