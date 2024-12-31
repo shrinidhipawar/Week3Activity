@@ -23,8 +23,8 @@ class Server
 
   handleConnection(socket) 
   {
-    console.log("A new client connected");
-    socket.send("Welcome to the WebSocket server!");
+    // console.log("A new client connected");
+    // socket.send("Welcome to the WebSocket server!");
 
     socket.on('message', (message) => 
     {
