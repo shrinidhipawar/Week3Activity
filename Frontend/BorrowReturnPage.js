@@ -10,6 +10,13 @@ borrowReturnButton.addEventListener("click", () =>
     const bookName = bookNameInput.value;
     const bookQuantity = bookQuantityInput.value;
 
+    //Check if bookQuantity is an integer and check if it is > 0
+    if (bookQuantity && !Number.isInteger(parseInt(bookQuantity)) || parseInt(bookQuantity) <= 0)
+    {
+        alert("Please enter a valid quantity");
+        return;
+    }
+
     if (operation && bookName && bookQuantity)
     {
         const book = { bookName: bookName, quantity: bookQuantity };
