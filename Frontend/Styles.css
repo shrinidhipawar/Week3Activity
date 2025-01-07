@@ -64,3 +64,18 @@ input
     justify-content: space-evenly;
     height: 100%;
 }
+
+td, th
+{
+    padding: 10px;
+    font-size: 20px;
+    background-color: #222222;
+    color: white;
+    border: solid white 2px;
+}
+
+th
+{
+    font-weight: bold;
+}
+
