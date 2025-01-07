@@ -1,4 +1,4 @@
-import { operations } from "../../Common/Enumerations/Operations.js";
+import { operations } from "../Enumerations/Operations.js";
 import { insertBook } from "./Messages/InsertBook.js";
 
 export function messageHandler(socket, message)

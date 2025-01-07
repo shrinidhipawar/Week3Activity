@@ -1,5 +1,5 @@
-const ws = require('ws'); 
-import { port } from '../../Common/Globals.js';
+// const ws = require('ws'); 
+import { WebSocketServer } from 'ws';
 import DatabaseConnector from '../Database/DatabaseConnector.js';
 import { initializeDatabase } from '../Database/InitializeDatabase.js';
 import { messageHandler } from './MessageHandler.js';
@@ -10,7 +10,7 @@ class Server
 
   static async startServer() 
   {
-    Server.webSocketServer = new ws.Server( {port: port} );
+    Server.webSocketServer = new WebSocketServer( {port: 8080} );
     console.log("Starting server");
 
     Server.webSocketServer.on("connection", (socket) => 
