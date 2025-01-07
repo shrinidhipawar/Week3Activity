@@ -1,7 +1,7 @@
 export const operations = 
 {
-    INSERT: 0, 
-    BORROW: 1, 
-    REMOVE: 2, 
-    RETURN: 3
+    INSERT: "INSERT", 
+    BORROW: "BORROW", 
+    REMOVE: "REMOVE", 
+    RETURN: "RETURN"
 };

@@ -8,17 +8,17 @@ export async function initializeDatabase()
         quantity int
     );`;
 
-    // const createBorrowTableQuery = `
-    // CREATE TABLE IF NOT EXISTS Borrow (
-    //     book_id INT NOT NULL,
-    //     user_name VARCHAR(255) NOT NULL,
-    //     borrow_date DATETIME DEFAULT CURRENT_TIMESTAMP,
-    //     quantity INT NOT NULL,
-    //     FOREIGN KEY (book_id) REFERENCES Books(id) ON DELETE CASCADE
-    // );`;
+    const createBorrowTableQuery = `
+    CREATE TABLE IF NOT EXISTS Borrow (
+        borrower_name VARCHAR(255),
+        book_name VARCHAR(255),
+        borrow_date DATE,
+        due_date DATE,
+        FOREIGN KEY (book_name) REFERENCES Books(book_name) ON DELETE CASCADE
+    );`;
 
     await DatabaseConnector.executeQuery(createBooksTableQuery);
     console.log("books table initialized");
-    // await DatabaseConnector.executeQuery(createBorrowTableQuery);
-    // console.log("Database initialized");
+    await DatabaseConnector.executeQuery(createBorrowTableQuery);
+    console.log("Database initialized");
 }
