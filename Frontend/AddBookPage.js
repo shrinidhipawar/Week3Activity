@@ -8,7 +8,7 @@ addBookButton.addEventListener("click", () =>
     const bookName = bookNameInput.value;
     const bookQuantity = bookQuantityInput.value;
 
-    if (bookId && bookName && bookQuantity)
+    if (bookName && bookQuantity)
     {
         const book = { bookName: bookName, quantity: bookQuantity };
         sendRequest("INSERT", book);
