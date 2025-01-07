@@ -26,8 +26,6 @@ export function returnBook(socket, message)
         }
         else 
         {
-            DatabaseConnector.executeQuery(`DELETE FROM Borrow WHERE borrower_name = '${borrowerName}' AND book_name = '${bookName}' ORDER BY due_date ASC LIMIT ${quantity}`);
-
             let dueDatePassed = false;
 
             for(let i = 0; i < quantity; i++)

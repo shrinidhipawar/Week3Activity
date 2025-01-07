@@ -3,5 +3,6 @@ export const operations =
     INSERT: "INSERT", 
     BORROW: "BORROW", 
     REMOVE: "REMOVE", 
-    RETURN: "RETURN"
+    RETURN: "RETURN",
+    BORROW_LIST: "BORROW_LIST"
 };
