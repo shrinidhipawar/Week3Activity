@@ -1,6 +1,7 @@
 import { operations } from "../Enumerations/Operations.js";
 import { borrowBook } from "./Messages/BorrowBook.js";
 import { insertBook } from "./Messages/InsertBook.js";
+import { returnBook } from "./Messages/ReturnBook.js";
 
 export function messageHandler(socket, message)
 {
@@ -28,6 +29,7 @@ export function messageHandler(socket, message)
 
         case operations.RETURN:
         {
+            returnBook(socket, message);
             break;
         }
     }

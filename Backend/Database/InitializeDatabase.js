@@ -12,8 +12,8 @@ export async function initializeDatabase()
     CREATE TABLE IF NOT EXISTS Borrow (
         borrower_name VARCHAR(255),
         book_name VARCHAR(255),
-        borrow_date DATE,
-        due_date DATE,
+        borrow_date DATETIME,
+        due_date DATETIME,
         FOREIGN KEY (book_name) REFERENCES Books(book_name) ON DELETE CASCADE
     );`;
 
