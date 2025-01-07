@@ -1,21 +1,23 @@
-import { sendRequest } from "./SendRequest";
+import { sendRequest } from "./SendRequest.js";
 
 const borrowListTableContainer = document.querySelector(".borrow-list-table-container");
 const borrowerNameInput = document.querySelector(".borrower-name");
 
-borrowerNameInput.addEventListener("change", () =>
+borrowerNameInput.addEventListener("keydown", (event) =>
 {
-    const borrowerName = borrowerNameInput.value;
-
-    if (borrowerName)
+    if(event.key === "Enter")
     {
-        sendRequest("BORROW_LIST", { borrowerName: borrowerName });
-    }
-    else
-    {
-        alert("Please fill all the fields!");
-    }
+        const borrowerName = borrowerNameInput.value;
 
+        if (borrowerName)
+        {
+            sendRequest("BORROW_LIST", { borrowerName: borrowerName });
+        }
+        else
+        {
+            alert("Please fill all the fields!");
+        }
+    }
 });
 
 window.addEventListener("borrow-list-received", (event) =>
