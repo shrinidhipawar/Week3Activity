@@ -15,7 +15,7 @@ The Library Management System is a web-based application designed to streamline 
 
 - **Borrow Books:** Check out available books with ease.
 
-- **Return Books:** Manage returns to avoid overdue penalties.
+- **Return Books:** Manage returns.
 
 - **Track Borrowed Books:** View borrowed books and their due dates.
 
@@ -26,7 +26,7 @@ The Library Management System is a web-based application designed to streamline 
 
 - **Remove Books:** Delete outdated or unavailable books from the system.
 
-- **User Management:** View user activity and borrowing history.
+- **User Management:** View user activity.
 
 **SCREENSHOTS :**
 
@@ -35,7 +35,8 @@ The Library Management System is a web-based application designed to streamline 
 library-management-system :         
 
 
-```library-management-system/
+```
+library-management-system/
 ├── Backend/
 │   ├── Database/
 │   │   ├── DatabaseConnector.js         # Handles database connection
