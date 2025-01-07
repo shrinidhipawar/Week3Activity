@@ -1,20 +1,40 @@
 import DatabaseConnector from "../../Database/DatabaseConnector.js";
+import { operations } from "../../Enumerations/Operations.js";
 
 export function insertBook(socket, message)
 {
+    console.log("inside insertBook");
     const data = message["data"];
 
-    const id = data["id"];
-    const title = data["title"];
-    const author = data["author"];
-    const publisher = data["publisher"];
-    const year = data["year"];
-    const quantity = data["quantity"];
+    const bookName = data["bookName"];
+    const quantity = parseInt(data["quantity"]);
 
-    const query = `INSERT INTO Books (id, title, author, publisher, year, quantity) VALUES (${id}, '${title}', '${author}', '${publisher}', ${year}, ${quantity});`;
-
-    DatabaseConnector.executeQuery(query).then((result) => 
+    //If book already exists add the quantity
+    const checkBookQuery = `SELECT * FROM Books WHERE book_name = '${bookName}'`;
+    DatabaseConnector.executeQuery(checkBookQuery).then((result) => 
     {
-        console.log("Book inserted");
-    });
+        if (result["rows"].length > 0)
+        {
+            const currentQuantity = parseInt(result["rows"][0]["quantity"]);
+            const updatedQuantity = currentQuantity + quantity;
+
+            const updateQuery = `UPDATE Books SET quantity = ${updatedQuantity} WHERE book_name = '${bookName}'`;
+            DatabaseConnector.executeQuery(updateQuery).then((result) => 
+            {
+                console.log("Book updated");
+                socket.send(JSON.stringify({ operation: operations.INSERT, status: 200 }));
+            });
+            return;
+        }
+        else
+        {
+            const query = `INSERT INTO Books (book_name, quantity) VALUES ('${bookName}', ${quantity});`;
+
+            DatabaseConnector.executeQuery(query).then((result) => 
+            {
+                console.log("Book inserted");
+                socket.send(JSON.stringify({ operation: operations.INSERT, status: 200 }));
+            });
+        }
+    });    
 }
