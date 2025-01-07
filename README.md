@@ -10,7 +10,7 @@ FEATURES :
   * Fine collection
   * Categorical arrangement
 
-FRONTEND :
+FRONTEND:
 
 
 
