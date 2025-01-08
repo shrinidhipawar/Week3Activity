@@ -1,9 +1,5 @@
 # Week3Activity
 
-**LIBRARY MANAGEMENT SYSTEM**
-
-
-**OVERVEIW :**
 
 The Library Management System is a web-based application designed to streamline library operations for both users and librarians. It allows users to borrow and return books effortlessly, while librarians can manage the collection and user details. This system provides a user-friendly interface and ensures data integrity with robust backend support.
 
