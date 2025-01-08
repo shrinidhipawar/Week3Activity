@@ -28,6 +28,7 @@ The Library Management System is a web-based application designed to streamline 
 ![alt text](images/homepage.png)
 ![alt text](images/addBook.png)
 ![alt text](images/borrowReturn.png)
+
 **FILE STRUCTURE :**
 
 library-management-system :         
