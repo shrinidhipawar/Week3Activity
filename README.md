@@ -72,7 +72,7 @@ library-management-system/
 ## Technologies Used
 
 - **Frontend**: HTML, CSS, JavaScript
-- **Backend**: Node.js, Express
+- **Backend**: Node.js, WebSocket
 - **Database**: MySQL
 - **Tools**: Visual Studio Code (VS Code), npm
 
