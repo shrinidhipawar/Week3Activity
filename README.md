@@ -68,3 +68,89 @@ library-management-system/
 ├── package-lock.json                    # Lock file for dependencies
 └── README.md                            # Documentation file
 ```
+
+## Technologies Used
+
+- **Frontend**: HTML, CSS, JavaScript
+- **Backend**: Node.js, Express
+- **Database**: MySQL
+- **Tools**: Visual Studio Code (VS Code), npm
+
+---
+
+## Installation
+
+### Prerequisites
+
+- Node.js (v16 or later)
+- MySQL (with a running server)
+- Code editor (e.g., VS Code)
+
+### Steps
+
+1. **Clone the repository**:
+
+   ```bash
+   git clone https://github.com/YourUsername/library-management-system.git
+   ```
+
+2. **Navigate to the project directory**:
+
+   ```bash
+   cd library-management-system
+   ```
+
+3. **Install dependencies**:
+
+   ```bash
+   npm install
+   ```
+
+4. **Set up the database**:
+
+   - Create a MySQL database and note down the credentials.
+   - Update the database connection settings in `Backend/Database/DatabaseConnector.js`.
+   - Run the SQL schema provided in the `InitializeDatabase.js` file to set up the required tables.
+
+5. **Run the application**:
+
+   ```bash
+   node Main.js
+   ```
+
+6. **Access the application**: Open your browser and navigate to `http://localhost:3000`.
+
+---
+
+## Usage
+
+1. **User Portal**:
+
+   - Borrow and return books.
+   - View the current list of borrowed books.
+
+2. **Librarian Portal**:
+
+   - Add or remove books from the system.
+   - Track overdue books and user activities.
+
+---
+
+## Contribution Guidelines
+
+We welcome contributions to the project! Follow these steps:
+
+1. Fork the repository.
+2. Create a feature branch (`git checkout -b feature-name`).
+3. Commit your changes (`git commit -m "Add feature"`).
+4. Push to the branch (`git push origin feature-name`).
+5. Open a pull request.
+
+Refer to the `CONTRIBUTING.md` file for more details.
+
+---
+
+## License
+
+This project is licensed under the MIT License. See the `LICENSE` file for more information.
+
