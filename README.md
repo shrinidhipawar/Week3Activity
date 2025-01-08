@@ -25,13 +25,16 @@ The Library Management System is a web-based application designed to streamline 
 - **User Management:** View user activity and borrowing history.
 
 **SCREENSHOTS :**
-
+![alt text](images/homepage.png)
+![alt text](images/addBook.png)
+![alt text](images/borrowReturn.png)
 **FILE STRUCTURE :**
 
 library-management-system :         
 
 
-```library-management-system/
+```
+library-management-system/
 ├── Backend/
 │   ├── Database/
 │   │   ├── DatabaseConnector.js         # Handles database connection
